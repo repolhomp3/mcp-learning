@@ -104,7 +104,9 @@ class FileSystemMCP:
             return {"error": str(e)}
 
 if __name__ == "__main__":
-    server = FileSystemMCP(["/Users/karl/MCP"])  # Restrict to project directory
+    import os
+    project_dir = os.path.dirname(os.path.abspath(__file__))
+    server = FileSystemMCP([os.path.dirname(project_dir)])  # Restrict to project directory
     
     for line in sys.stdin:
         try:

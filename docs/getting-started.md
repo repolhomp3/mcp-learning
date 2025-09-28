@@ -4,7 +4,7 @@
 
 ### 1. Install Dependencies
 ```bash
-cd /Users/karl/MCP
+cd mcp-learning
 pip install -r requirements.txt
 ```
 

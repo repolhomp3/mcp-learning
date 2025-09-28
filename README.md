@@ -26,7 +26,7 @@ Model Context Protocol (MCP) is an open standard that enables AI assistants to s
 ## 📁 Project Structure
 
 ```
-MCP/
+mcp-learning/
 ├── aws-mcp/                 # AWS integration (Bedrock, S3, regions)
 │   └── aws-server.py         # Cost-optimized AWS MCP server
 ├── database-mcp/             # SQLite database operations
@@ -50,8 +50,8 @@ MCP/
 
 ### 1. Install Dependencies
 ```bash
-git clone <your-repo>
-cd MCP
+git clone git@github.com:repolhomp3/mcp-learning.git
+cd mcp-learning
 pip install -r requirements.txt
 ```
 
@@ -130,7 +130,7 @@ echo '{"method": "tools/call", "params": {"name": "get_weather", "arguments": {"
 
 ```bash
 # List project files
-echo '{"method": "tools/call", "params": {"name": "list_directory", "arguments": {"path": "/Users/karl/MCP"}}}' | python3 local-mcp/filesystem-server.py
+echo '{"method": "tools/call", "params": {"name": "list_directory", "arguments": {"path": "$(pwd)"}}}' | python3 local-mcp/filesystem-server.py
 ```
 
 ## 💰 Cost Optimization
