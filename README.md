@@ -155,6 +155,19 @@ aws ce get-cost-and-usage --time-period Start=2024-01-01,End=2024-01-31 --granul
 # Recommended: $5, $10, $25 thresholds
 ```
 
+## 🏗️ Enterprise Deployment
+
+### EKS Architecture
+
+![MCP EKS Deployment Architecture](docs/mcp-eks.png)
+
+For production enterprise deployments, MCP servers can be containerized and deployed on Amazon EKS for:
+- **High Availability**: Multi-AZ pod distribution
+- **Auto-Scaling**: Dynamic scaling based on AI workload demand
+- **Security**: Network policies, RBAC, encrypted secrets
+- **Observability**: Distributed tracing and monitoring
+- **Multi-Tenancy**: Isolated MCP servers per team/department
+
 ## 🧪 Testing & Development
 
 ### Interactive Testing
